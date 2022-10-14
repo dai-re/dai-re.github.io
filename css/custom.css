@@ -1,0 +1,97 @@
+.hero {
+  background-image: url("../src/730966.gif");
+  background-position: center;
+  background-size: cover;
+  z-index: -2000;
+  animation-name: blackhole;
+  animation-direction: alternate;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+@keyframes blackhole {
+  0% {
+    width: 150%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+#astronot {
+  top: 20%;
+  left: 50%;
+  animation-name: astronot;
+  animation-direction: alternate;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+.text_hero {
+  z-index: 1000;
+}
+@keyframes astronot {
+  0% {
+    top: 20%;
+    width: 5px;
+    filter: blur(0.5px) grayscale(100%);
+  }
+  100% {
+    top: 24%;
+    width: 200px;
+    left: 30%;
+    filter: blur(0px) grayscale(0%);
+    transform: rotate(-20deg);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: url("../src/730966.gif");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    width: 50%;
+    height: 20em;
+    margin-top: 10%;
+    animation-name: blackhole;
+    animation-direction: alternate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes blackhole {
+    0% {
+      width: 100%;
+      height: 25em;
+      margin-left: -55%;
+    }
+    100% {
+      width: 50%;
+      margin-left: -10%;
+    }
+  }
+  #astronot {
+    top: 50%;
+    left: 15%;
+    animation-name: astronot;
+    animation-direction: alternate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  }
+  .text_hero {
+    z-index: 1000;
+  }
+  @keyframes astronot {
+    0% {
+      top: 50%;
+      width: 5px;
+      filter: blur(0.5px) grayscale(100%);
+    }
+    100% {
+      top: 28%;
+      width: 200px;
+      left: 30%;
+      filter: blur(0px) grayscale(0%);
+      transform: rotate(-20deg);
+    }
+  }
+}
