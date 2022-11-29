@@ -1,15 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html"],
+  content: [
+    "./js/*.js",
+    "index.html"
+    ],
   theme: {
     extend: {
-      colors: {
-        dark: "#000000",
+      screens: {
+        sm: '430px',
+        md: '760px',
+        lg: '976px',
+        xl: '1140px',
       },
-      fontFamily: {
-        pop: "pop",
+      colors: {
+        clifford: '#da373d',
+        dragv: '#323346',
+        dragvw: '#686879',
+      },
+      width: {
+        afull: '90%',
+        tree: '300px'
+      },
+      fontSize: {
+        xs: '10px',
       },
     },
   },
   plugins: [],
-};
+}
