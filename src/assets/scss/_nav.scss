@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em var(--padding-x);
+  color: var(--text);
+  .left {
+    gap: 0.3em;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 30px;
+      font-weight: 900;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: var(--boxBg);
+      box-shadow:
+        0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+        0 0 0 1px rgba(10, 10, 10, 0.02);
+    }
+  }
+}
