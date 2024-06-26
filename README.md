@@ -48,7 +48,7 @@ Proyek ini dilisensikan di bawah Lisensi MIT - lihat berkas [LICENSE](LICENSE) u
 
 _Selamat berkoding! 🚀_
 
-[daire.eu.org](https://daire.eu.org/)
+[dairew.my.id](https://dairew.my.id/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
