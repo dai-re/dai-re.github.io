@@ -33,32 +33,28 @@ const App = () => {
               whileTap={{ scale: 0.7, y: -20 }}
               href='https://facebook.com/daire.it'
               target='_blank'
-              className='link'
-            >
+              className='link'>
               <FaFacebookF color='rgb(61,124,181)' />
             </motion.a>
             <motion.a
               whileTap={{ scale: 0.7, y: -20 }}
               href='https://github.com/dai-re/'
               target='_blank'
-              className='link'
-            >
+              className='link'>
               <DiGithubAlt color='var(--text)' />
             </motion.a>
             <motion.a
               whileTap={{ scale: 0.7, y: -20 }}
               href='https://instagram.com/dei.terada'
               target='_blank'
-              className='link'
-            >
+              className='link'>
               <BiLogoInstagramAlt color='rgb(181,61,96)' />
             </motion.a>
             <motion.a
               whileTap={{ scale: 0.7, y: -20 }}
               href='https://t.me/mogionc'
               target='_blank'
-              className='link'
-            >
+              className='link'>
               <FaTelegramPlane color='rgb(61,153,181)' />
             </motion.a>
           </div>
@@ -68,8 +64,8 @@ const App = () => {
         <footer>
           <div className='alert is-flex is-align-items-center is-justify-content-center'>
             <BsInfoCircleFill />
-            <h3 className='has-text-weight-bold is-size-7'>setatus:</h3>
-            <span className='an has-text-weight-medium is-size-7'> sedang didalam pekerjaan</span>
+            <h3 className='has-text-weight-bold is-size-7'>status:</h3>
+            <span className='an has-text-weight-medium is-size-7'> sedang di dalam pekerjaan</span>
           </div>
           <div className='info'>
             <p>
@@ -90,7 +86,7 @@ const App = () => {
               <h1>Temukan Kreativitas Bersama Saya!</h1>
               <p>
                 <b>Surel: </b>
-                <a href='mailto:me@daire.eu.org'>me@daire.eu.org</a>
+                <a href='mailto:daichanhime@gmail.com'>daichanhime@gmail.com</a>
                 <br />
                 <b>Telegram: </b>
                 <a href='https://t.me/mogionc'>@mogionc</a>
