@@ -1,33 +1,94 @@
-# Astro Starter Kit: Minimal
+# Astro Home Page
 
-```sh
-npm create astro@latest -- --template minimal
-```
+<p align='center'>
+<a href="https://www.buymeacoffee.com/dai.re">
+    <img alt="Buy Me a Coffee" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=dai.re&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff" width="150"/>
+  </a>
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<video width='100%' controls>
+  <source src="/doc/test.mp4" type="video/mp4">
+</video>
 
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+├── astro.config.mjs
+├── bun.lockb
+├── eslint.config.js
+├── package.json
+├── public
+│   ├── ads.txt
+│   ├── CNAME
+│   ├── cute-rem-dancing.gif
+│   ├── favicon.png
+│   ├── fonts
+│   │   └── Gotham-Font
+│   │       ├── Gotham-Black.otf
+│   │       ├── GothamBoldItalic.ttf
+│   │       ├── Gotham-Bold.otf
+│   │       ├── GothamBold.ttf
+│   │       ├── Gotham-BookItalic.otf
+│   │       ├── GothamBookItalic.ttf
+│   │       ├── GothamBook.ttf
+│   │       ├── GothamLightItalic.ttf
+│   │       ├── Gotham-Light.otf
+│   │       ├── GothamLight.ttf
+│   │       ├── GothamMedium_1.ttf
+│   │       ├── GothamMediumItalic.ttf
+│   │       ├── GothamMedium.ttf
+│   │       ├── Gotham-ThinItalic.otf
+│   │       ├── Gotham-Thin.otf
+│   │       ├── Gotham-UltraItalic.otf
+│   │       ├── Gotham-XLightItalic.otf
+│   │       └── Gotham-XLight.otf
+│   ├── humans.txt
+│   └── robots.txt
+├── README.md
+├── src
+│   ├── assets
+│   │   ├── css
+│   │   │   └── main.css
+│   │   └── images
+│   │       ├── 0001.webp
+│   │       ├── 0002.webp
+│   │       ├── 0003.webp
+│   │       ├── 0004.webp
+│   │       ├── cat-poly-cam.jpeg
+│   │       └── cat-poly.jpeg
+│   ├── components
+│   │   ├── MainFooter.astro
+│   │   ├── MainGalerry.astro
+│   │   ├── MainGithub.astro
+│   │   ├── MainHeoText.astro
+│   │   └── MainNav.astro
+│   ├── data
+│   │   ├── gitApi.ts
+│   │   └── main.ts
+│   ├── env.d.ts
+│   ├── icons
+│   │   ├── coffee.svg
+│   │   ├── discord.svg
+│   │   ├── exclamation.svg
+│   │   ├── facebook.svg
+│   │   ├── Girl.astro
+│   │   ├── github.svg
+│   │   ├── git.svg
+│   │   ├── instagram.svg
+│   │   └── twitter.svg
+│   ├── layouts
+│   │   └── MainLayout.astro
+│   └── pages
+│       ├── index.astro
+│       └── rem.astro
+├── tailwind.config.mjs
+└── tsconfig.json
+
+13 directories, 58 files
+
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -35,13 +96,9 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| `bun install`             | Installs dependencies                            |
+| `bun run dev`             | Starts local dev server at `localhost:4321`      |
+| `bun run build`           | Build your production site to `./dist/`          |
+| `bun run preview`         | Preview your build locally, before deploying     |
+| `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `bun run astro -- --help` | Get help using the Astro CLI                     |

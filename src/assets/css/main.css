@@ -128,3 +128,11 @@
   content: 'Terbaru';
   @apply rounded-md bg-blue-300 px-1 pt-1 text-xs font-semibold text-white dark:text-stone-900;
 }
+
+main img {
+  transition-duration: 500ms;
+  filter: grayscale(1);
+}
+main img:hover {
+  filter: grayscale(0);
+}
