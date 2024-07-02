@@ -6,9 +6,7 @@
   </a>
 </p>
 
-<video width='100%' controls>
-  <source src="/doc/test.mp4" type="video/mp4">
-</video>
+<video src="doc/doc.mp4" controls autoplay></video>
 
 ## 🚀 Project Structure
 
@@ -38,7 +36,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │       ├── GothamLight.ttf
 │   │       ├── GothamMedium_1.ttf
 │   │       ├── GothamMediumItalic.ttf
-│   │       ├── GothamMedium.ttf
+│   │      " ├── GothamMedium.ttf
 │   │       ├── Gotham-ThinItalic.otf
 │   │       ├── Gotham-Thin.otf
 │   │       ├── Gotham-UltraItalic.otf
