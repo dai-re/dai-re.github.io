@@ -1,0 +1,92 @@
+---
+import { Icon } from 'astro-icon/components';
+import { navLink, title } from '../data/main';
+---
+
+<nav class="mb-4 mt-4 flex h-11 w-full items-center justify-between gap-2">
+  <div class="flex items-center gap-2">
+    <button
+      id="btn-moon"
+      class="duration-700 active:rotate-180 active:scale-75"
+    >
+      <Icon
+        name="icon-park-twotone:moon"
+        class="text-xl"
+      />
+    </button>
+    <button
+      id="btn-sun"
+      class="hidden text-xl duration-700 active:rotate-180 active:scale-75"
+    >
+      <Icon name="icon-park-twotone:sun" />
+    </button>
+    <h2 class="text-2xl font-bold">{title}</h2>
+  </div>
+  <div class="flex items-center gap-2">
+    {
+      navLink.map((e) => (
+        <a
+          href={e.link}
+          class="link-icon flex h-6 w-6 items-center justify-center rounded-md bg-white shadow-md shadow-stone-500/25 hover:-mt-2 dark:bg-stone-900 dark:shadow-black"
+        >
+          <Icon
+            name={e.sosialIcon}
+            class=""
+          />
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    const allColor = [
+      '#FFE9D0',
+      '#af9da9',
+      '#BBE9FF',
+      '#B1AFFF',
+      '#F6995C',
+      '#51829B',
+      '#9BB0C1',
+      '#EADFB4',
+      '#A5DD9B',
+      '#804674',
+    ];
+    const allList = document.querySelectorAll('.link-icon');
+    allList.forEach((list) => {
+      list.addEventListener('mouseover', () => {
+        const color = allColor[Math.floor(Math.random() * allColor.length)];
+        list.style.color = color;
+      });
+      list.addEventListener('mouseout', () => {
+        list.style.color = 'unset';
+      });
+    });
+    const buttonMoon = document.getElementById('btn-moon');
+    const buttonSun = document.getElementById('btn-sun');
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        buttonMoon?.classList.add('hidden');
+        buttonSun?.classList.remove('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        buttonMoon?.classList.remove('hidden');
+        buttonSun?.classList.add('hidden');
+      }
+    }
+    function toggleTheme() {
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    }
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    buttonMoon?.addEventListener('click', toggleTheme);
+    buttonSun?.addEventListener('click', toggleTheme);
+  });
+</script>

@@ -1,0 +1,88 @@
+---
+import { SEO } from 'astro-seo';
+import { description, title } from '../data/main';
+import '../assets/css/main.css';
+
+// imported images
+import mainImage from '../assets/images/cat-poly.jpeg';
+import MainNav from '../components/MainNav.astro';
+import MainHeoText from '../components/MainHeoText.astro';
+import MainGithub from '../components/MainGithub.astro';
+import MainGalerry from '../components/MainGalerry.astro';
+import { Icon } from 'astro-icon/components';
+import MainFooter from '../components/MainFooter.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script is:inline>
+      (function () {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <meta
+      http-equiv="Content-Type"
+      content="text/html;charset=UTF-8"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="keywords"
+      content="blog, coding, programming, daire"
+    />
+    <SEO
+      title={title}
+      description={description}
+      twitter={{
+        title: `${title}`,
+        card: 'summary_large_image',
+        description: `${description}`,
+        creator: '@03ii00',
+        image: `${mainImage.src}`,
+      }}
+      openGraph={{
+        basic: {
+          title: `${title}`,
+          type: 'Home Page',
+          image: `${mainImage.src}`,
+          url: `{Astro.url}`,
+        },
+      }}
+      extend={{
+        link: [{ rel: 'icon', href: '/favicon.png' }],
+      }}
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+  </head>
+  <body class="w-screen font-body tracking-wide text-stone-700 dark:bg-stone-900 dark:text-stone-300">
+    <main class="mx-auto flex w-[70%] flex-col">
+      <MainNav />
+      <MainHeoText />
+      <MainGithub />
+      <MainGalerry />
+      <div class="mt-4 flex items-center justify-center rounded-lg bg-stone-400/15 py-5">
+        <p class="flex items-center gap-2 text-xs">
+          <b class="flex items-center gap-1"
+            ><Icon
+              name={'exclamation'}
+              class={'bg-stone-700 rounded-full text-stone-300 dark:text-stone-700 dark:bg-stone-300 -mt-1'}
+            /> status:</b
+          >
+          <span class="animate-pulse">sedang di dalam pekerjaan</span>
+        </p>
+      </div>
+      <MainFooter />
+    </main>
+  </body>
+</html>

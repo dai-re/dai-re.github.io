@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import imageCatpoly from '../assets/images/cat-poly.jpeg';
+
+import { fetchRepos } from '../data/gitApi';
+import { Icon } from 'astro-icon/components';
+
+const username = 'dai-re';
+const repos = await fetchRepos(username);
+// console.log('🚀 ~ repos:', repos);
+---
+
+<div class="mt-4 grid gap-4 sm:grid-cols-2">
+  <Image
+    src={imageCatpoly}
+    alt="cat-poly"
+    class="rounded-xl"
+  />
+  <div
+    id="repo-list"
+    class="script px-4"
+  >
+    <h3 class="text-xl">Repository terbaru saya</h3>
+    <ul id="list-github">
+      {
+        repos.map(
+          (repo: {
+            html_url: string | URL | null | undefined;
+            url: string | URL | null | undefined;
+            name: unknown;
+          }) => (
+            <li class="flex items-center gap-2">
+              <Icon name={'git'} />
+              <a
+                href={repo.html_url}
+                target="_blank"
+              >
+                {repo.name}
+              </a>
+            </li>
+          ),
+        )
+      }
+    </ul>
+  </div>
+</div>
