@@ -16,7 +16,7 @@ export const navLink: { sosialIcon: string; link: string }[] = [
   },
   {
     sosialIcon: 'instagram',
-    link: 'https://www.instagram.com/dai.terada/',
+    link: 'https://www.instagram.com/daire.it/',
   },
   {
     sosialIcon: 'twitter',
